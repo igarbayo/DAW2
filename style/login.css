@@ -1,0 +1,111 @@
+@import url('general.css');
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #6286e8;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(75, 56, 56, 0.6);
+    border-radius: 10px;
+}
+
+.login-box h1 {
+    margin: 20px 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .title-divider {
+    border: 1px solid white;
+    width: 250px;
+    margin-bottom: 50px;
+}
+
+.login-box .user-box {
+    width: 80%;
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    padding: 15px 0;
+    font-size: 20px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #a0e1f5;
+    font-size: 15px;
+}
+
+.login-box form p {
+    margin: 15px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: medium;
+}
+
+.login-box form a.register {
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 3px 3px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.login-box form a.register:hover, .login-box form a.continue:active {
+    background-color: #9ab7ea;
+    color: white;
+}
+
+.login-box form input.continue {
+    background-color: transparent;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    padding: 12px 18px;
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+    float: right;
+}
+
+.login-box form input.continue:hover, .login-box form input.continue:active {
+    background-color: #9ab7ea;
+    color: white;
+}
+
+.login-box .error-message {
+    color: rgba(147, 0, 0, 0.9);
+    font-size: 16px;
+    margin-top: 5px;
+}

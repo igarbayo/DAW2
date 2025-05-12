@@ -1,0 +1,10 @@
+/* Paleta de colores */
+:root {
+    --primary-color: #4C9BFF;  /* Azul vibrante */
+    --secondary-color: #FF6F61; /* Coral */
+    --accent-color: #FFD93D;  /* Amarillo suave */
+    --background-color: #F4F4F9; /* Gris claro */
+    --text-color: #333333;
+    --input-bg: #F0F4F8; /* Fondo suave para inputs */
+    --input-border: #D1D8E0; /* Borde suave */
+}
