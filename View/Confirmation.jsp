@@ -7,22 +7,37 @@
 <html>
 <head>
     <title>Compra confirmada</title>
-    <link rel="stylesheet" type="text/css" href="style/general_style.css">
+    <link rel="stylesheet" type="text/css" href="style/confirmar.css">
 </head>
 <body>
 <header><h1>Datos de la compra</h1></header>
 <main>
     <c:choose>
         <c:when test="${orderId > 0}">
-            <p class="order-info">Identificador del pedido: <b>${orderId}</b></p>
-            <p class="order-info">Precio total: <b>${totalPrice}€</b></p>
-            <p class="order-info">Email: <b>${email}</b></p>
-            <c:if test="${username != null}">
-                <p class="order-info">Nombre de usuario: <b>${username}</b></p>
-            </c:if>
-            <c:if test="${purchaseDate != null}">
-                <p class="order-info">Fecha de compra: <b>${purchaseDate}</b></p>
-            </c:if>
+            <table id="order-table" border="1" cellpadding="10" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Identificador del pedido</th>
+                        <th>Precio total</th>
+                        <th>Correo electrónico</th>
+                        <th>Nombre de usuario</th>
+                        <th>Fecha de compra</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${orderId}</td>
+                        <td>${totalPrice} €</td>
+                        <td>${email}</td>
+                        <c:if test="${username != null}">
+                            <td>${username}</td>
+                        </c:if>
+                        <c:if test="${purchaseDate != null}">
+                            <td>${purchaseDate}</td>
+                        </c:if>
+                    </tr>
+                </tbody>
+            </table>
         </c:when>
         <c:otherwise>
             <p class="order-error">Error: No se ha podido tramitar el pedido.</p>

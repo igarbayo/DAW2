@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>Confirmación de compra</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/general_style.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/general.css">
 </head>
 <body>
 <main>

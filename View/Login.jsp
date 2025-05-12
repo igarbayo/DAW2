@@ -7,7 +7,7 @@
 <html>
 <head>
     <title>Inicio de sesión</title>
-    <link rel="stylesheet" type="text/css" href="style/general_style.css">
+    <link rel="stylesheet" type="text/css" href="style/login.css">
 </head>
 <body>
 <main>

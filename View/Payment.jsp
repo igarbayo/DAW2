@@ -7,7 +7,7 @@
 <html>
 <head>
     <title>Confirmación de compra</title>
-    <link rel="stylesheet" type="text/css" href="style/general_style.css">
+    <link rel="stylesheet" type="text/css" href="style/general.css">
 </head>
 <body>
 <header><h1>Caja</h1></header>

@@ -8,7 +8,7 @@
 <HTML>
 <HEAD>
     <TITLE>Carrito de compra</TITLE>
-    <link rel="stylesheet" type="text/css" href="style/general_style.css">
+    <link rel="stylesheet" type="text/css" href="style/general.css">
 </HEAD>
 <BODY>
 <header><H1>Carrito de compra</H1></header>
@@ -26,7 +26,7 @@
                         <th>Artista</th>
                         <th>País</th>
                         <th>Precio</th>
-                        <th>Eliminar</th>
+                        <th>Seleccionar</th>
                     </tr>
                     <!-- Iterates over the items, showing them in a table -->
                     <c:forEach items="${cart.items}" var="item">
