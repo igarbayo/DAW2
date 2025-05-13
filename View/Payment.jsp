@@ -25,15 +25,13 @@
         </c:when>
         <c:otherwise>
             <%-- Form to redirect to home --%>
-            <form action="index.html" method="get">
+            <form action="index.jsp" method="get">
                 <input type="submit" value="Volver a la tienda a comprar algo">
             </form>
         </c:otherwise>
     </c:choose>
 </main>
-<footer>
-    <p>© 2024 Tienda de Música DAA</p>
-</footer>
+<%@ include file="footer.jsp" %>
 </body>
 </html>
 

@@ -1,30 +1,41 @@
 package Model.Utilities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Iterator;
-import java.util.List;
+import java.util.Set;
 
 /* JavaBean Cart */
 
 public class Cart implements Serializable {
-    private List<CD> items;
+    private Map<CD, Integer> items;
 
     public Cart() {
-        items = new ArrayList<>();
+        items = new HashMap<>();
     }
 
-    public List<CD> getItems() {
+    public Map<CD, Integer> getItems() {
         return items;
     }
 
-    public void setItems(List<CD> items) {
+    public void setItems(Map<CD, Integer> items) {
         this.items = items;
     }
 
     public void addItem(CD cd, int cantidad) {
-        for (int i = 0; i < cantidad; i++) {
-            items.add(cd);
+        if (cd == null || cantidad <= 0) return;
+        items.put(cd, cantidad);
+    }
+
+    public void removeUnit(CD cd) {
+        if (cd == null || !items.containsKey(cd)) return;
+
+        int current = items.get(cd);
+        if (current > 1) {
+            items.put(cd, current - 1);
+        } else {
+            items.remove(cd);
         }
     }
 
@@ -33,25 +44,22 @@ public class Cart implements Serializable {
     }
 
     public void deleteItemByTitle(String titulo) {
-
-        /* Iterates over the cart's items */
-        Iterator<CD> iter = items.iterator();
+        Iterator<Map.Entry<CD, Integer>> iter = items.entrySet().iterator();
         while (iter.hasNext()) {
-            CD item = iter.next();
-            /* Compares the title to the given one */
-            if (item.getTitle().equals(titulo)) {
-                /* Removes the item from the cart */
+            Map.Entry<CD, Integer> entry = iter.next();
+            if (entry.getKey().getTitle().equals(titulo)) {
                 iter.remove();
-                break; // deletes only the first match
+                break; // elimina solo el primero que coincida
             }
         }
     }
 
     public double calcTotalPrice() {
-
         double total = 0;
-        for (CD cd : items) {
-            total += cd.getPrice();
+        for (Map.Entry<CD, Integer> entry : items.entrySet()) {
+            CD cd = entry.getKey();
+            int cantidad = entry.getValue();
+            total += cd.getPrice() * cantidad;
         }
         return total;
     }
@@ -60,4 +68,3 @@ public class Cart implements Serializable {
         items.clear();
     }
 }
-

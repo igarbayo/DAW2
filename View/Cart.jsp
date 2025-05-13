@@ -26,18 +26,21 @@
                         <th>Artista</th>
                         <th>País</th>
                         <th>Precio</th>
+                        <th>Cantidad</th>
                         <th>Seleccionar</th>
                     </tr>
                     <!-- Iterates over the items, showing them in a table -->
-                    <c:forEach items="${cart.items}" var="item">
-                        <tr>
-                            <td>${item.title}</td>
-                            <td>${item.artist}</td>
-                            <td>${item.country}</td>
-                            <td>${item.price}</td>
-                            <td><input type="checkbox" name="delete" value="${item.title}"></td>
-                        </tr>
-                    </c:forEach>
+                    <c:forEach items="${cart.items}" var="entry">
+    <tr>
+        <td>${entry.key.title}</td>
+        <td>${entry.key.artist}</td>
+        <td>${entry.key.country}</td>
+        <td>${entry.key.price}</td>
+        <td>${entry.value}</td>
+        <td><input type="checkbox" name="delete" value="${entry.key.title}"></td>
+    </tr>
+</c:forEach>
+
                 </table>
                 <p class="price">Precio total: ${totalPrice}€</p>
                 <input type="hidden" name="mode" value="delete">
@@ -47,7 +50,7 @@
     </c:choose>
     
     <!-- Buttons to keep buying or end and go to payment -->
-    <form action="index.html">
+    <form action="index.jsp">
         <input type="submit" value="Seguir comprando">
     </form>
     <c:if test="${not empty cart.items}">
@@ -56,9 +59,7 @@
         </form>
     </c:if>
 </main>
-<footer>
-    <p>© 2024 Tienda de Música DAA</p>
-</footer>
+<%@ include file="footer.jsp" %>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {

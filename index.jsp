@@ -1,3 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,9 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style/general.css">
 </head>
 <body>
-<header>
-    <h1>Música para DAA</h1>
-</header>
+<%@ include file="View/header.jsp" %>
 <main>
     <form id="carritoForm" method="post" action="cart">
         <div class="form-group">
@@ -58,8 +58,6 @@
     });
     </script>
 </main>
-<footer>
-    <p>© 2025. Copyright Tienda de Música DAA. Ignacio Garbayo y Carlos Hermida</p>
-</footer>
+<%@ include file="View/footer.jsp" %>
 </body>
 </html>

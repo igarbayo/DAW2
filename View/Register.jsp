@@ -51,9 +51,7 @@
         </form>
     </section>
 </main>
-<footer>
-    <p>© 2024 Tienda de Música DAA</p>
-</footer>
+<%@ include file="footer.jsp" %>
 </body>
 
 <!-- Simple JScript to improve the responsivity of the text fields -->

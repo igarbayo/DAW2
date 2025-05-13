@@ -1,6 +1,7 @@
 package Model.Utilities;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class CD implements Serializable {
     
@@ -8,6 +9,7 @@ public class CD implements Serializable {
     private String artist;
     private String country;
     private double price;
+
 
     public CD(String title, String artist, String country, double price) {
         this.title = title;
@@ -46,5 +48,20 @@ public class CD implements Serializable {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof CD)) return false;
+        CD cd = (CD) o;
+        return Objects.equals(title, cd.title) &&
+               Objects.equals(artist, cd.artist);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, artist);
     }
 }

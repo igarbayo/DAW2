@@ -45,12 +45,10 @@
     </c:choose>
 
     <%-- Form to redirect to the main page --%>
-    <form action="index.html">
+    <form action="index.jsp">
         <input type="submit" value="Volver a la pantalla de inicio">
     </form>
 </main>
-<footer>
-    <p>© 2024 Tienda de Música DAA</p>
-</footer>
+<%@ include file="footer.jsp" %>
 </body>
 </html>
