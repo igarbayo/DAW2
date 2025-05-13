@@ -41,6 +41,22 @@
     <form method="post" action="payment"> <!-- Página de ocnfirmación de pago -->
         <input type="submit" name="endAndPay" value="Finalizar y pagar">
     </form>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("carritoForm");
+        const cantidadInput = document.getElementById("amount");
+
+        form.addEventListener("submit", function (e) {
+            const cantidad = parseInt(cantidadInput.value, 10);
+
+            if (isNaN(cantidad) || cantidad <= 0) {
+                e.preventDefault(); // Detiene el envío
+                alert("La cantidad debe ser un número mayor que 0.");
+                cantidadInput.focus();
+            }
+        });
+    });
+    </script>
 </main>
 <footer>
     <p>© 2025. Copyright Tienda de Música DAA. Ignacio Garbayo y Carlos Hermida</p>

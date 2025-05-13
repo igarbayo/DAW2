@@ -59,5 +59,21 @@
 <footer>
     <p>© 2024 Tienda de Música DAA</p>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const deleteForm = document.querySelector('form[action="cart"]');
+    deleteForm.addEventListener("submit", function (e) {
+        const checkboxes = deleteForm.querySelectorAll('input[type="checkbox"][name="delete"]');
+        const algunoSeleccionado = Array.from(checkboxes).some(checkbox => checkbox.checked);
+
+        if (!algunoSeleccionado) {
+            e.preventDefault(); // Evita que se envíe el formulario
+            alert("Debe seleccionar al menos un CD para eliminar.");
+        }
+    });
+});
+</script>
+
 </BODY>
 </HTML>

@@ -2,10 +2,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="Model.Utilities.Cart" %>
 <%@ page session="false" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
     <title>Confirmación de compra</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/general.css">
+    <link rel="stylesheet" type="text/css" href="style/login.css">
 </head>
 <body>
 <main>
