@@ -1,0 +1,6 @@
+En Windows, abrir Git Bash y ejecutar:
+	cd "/c/Program Files/Apache Software Foundation/Tomcat 9.0_Tomcat9-2/webapps/DAW2"
+	chmod +x compilar.sh
+	./compilar.sh
+
+Luego, el proyecto se despliega en Tomcat

@@ -1,9 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page import="Model.Utilities.Cart" %>
 <%@ page session="false" %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html>
 <html>
 <head>
     <title>Compra confirmada</title>
@@ -27,7 +28,7 @@
                 <tbody>
                     <tr>
                         <td>${orderId}</td>
-                        <td>${totalPrice} €</td>
+                        <td><fmt:formatNumber value="${totalPrice}" type="number" minFractionDigits="2" maxFractionDigits="2"/> €</td>
                         <td>${email}</td>
                         <c:if test="${username != null}">
                             <td>${username}</td>

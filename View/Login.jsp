@@ -3,16 +3,17 @@
 <%@ page import="Model.Utilities.Cart" %>
 <%@ page session="false" %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html>
 <html>
 <head>
     <title>Inicio de sesión</title>
-    <link rel="stylesheet" type="text/css" href="style/login.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/general.css">
 </head>
 <body>
+<%@ include file="header.jsp" %>
 <main>
     <section class="login-box">
-        <h1>Inicia sesión</h1>
+        <h3>Iniciar sesión</h3>
         <hr class="title-divider">
 
         <form action="login" method="post">
