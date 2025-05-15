@@ -1,7 +1,13 @@
 @import url('general.css');
+/* Esto es un comentario */
+
+body {
+    min-height: 170vh;
+}
 
 .login-box {
-    top: 50%;
+    position: absolute;
+    top: 70%;
     left: 50%;
     width: 500px;
     padding: 40px;

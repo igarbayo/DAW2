@@ -7,12 +7,12 @@
 <html>
 <head>
     <title>Confirmación de compra</title>
-    <link rel="stylesheet" type="text/css" href="style/login.css">
+    <link rel="stylesheet" type="text/css" href="style/login.css?v=2">
 </head>
 <body>
 <main>
     <section class="login-box">
-        <h1>Regístrate</h1>
+        <h3>Regístrate</h3>
         <hr class="title-divider">
 
         <form action="register" method="post">
@@ -51,7 +51,6 @@
         </form>
     </section>
 </main>
-<%@ include file="footer.jsp" %>
 </body>
 
 <!-- Simple JScript to improve the responsivity of the text fields -->

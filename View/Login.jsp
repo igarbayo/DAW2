@@ -7,10 +7,9 @@
 <html>
 <head>
     <title>Inicio de sesión</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/general.css">
+    <link rel="stylesheet" type="text/css" href="style/login.css?v=2">
 </head>
 <body>
-<%@ include file="header.jsp" %>
 <main>
     <section class="login-box">
         <h3>Iniciar sesión</h3>
@@ -40,7 +39,6 @@
         </form>
     </section>
 </main>
-<%@ include file="footer.jsp" %>
 </body>
 
 <!-- Simple JScript to improve the responsivity of the text fields -->
